@@ -1,0 +1,29 @@
+# Executáveis e objetos compilados
+*.exe
+*.out
+*.o
+*.obj
+a.out
+
+# Executáveis sem extensão (Linux/macOS)
+banco
+sorteio_beneficente
+q02*
+q03*
+q04*
+q05*
+atv01*
+atv02*
+atv03*
+atv04*
+atv05*
+!*.c
+!*.h
+
+# Arquivos de dados gerados em tempo de execução
+*.bin
+*.dat
+estoque.txt
+
+# Configurações locais de IDE
+.vscode/

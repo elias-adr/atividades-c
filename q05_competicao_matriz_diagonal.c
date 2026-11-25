@@ -55,8 +55,20 @@ int main() {
     } while (qtd_valores <= 0);
 
     double **matriz = malloc(PARTICIPANTES * sizeof(double *));
+    if (matriz == NULL) {
+        printf("Erro ao alocar memoria!\n");
+        return 1;
+    }
     for (int i = 0; i < PARTICIPANTES; i++) {
         matriz[i] = malloc(qtd_valores * sizeof(double));
+        if (matriz[i] == NULL) {
+            printf("Erro ao alocar memoria!\n");
+            for (int k = 0; k < i; k++) {
+                free(matriz[k]);
+            }
+            free(matriz);
+            return 1;
+        }
     }
 
     double lados_retangulo[2];
